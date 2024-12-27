@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="timer-container">
+      <h1 class="timer-container__title">Countdown Timer</h1>
+
+      <div class="timer-container__labels-container">
+        <div class="timer-container__label">Hours</div>
+        <div class="timer-container__label">Minutes</div>
+        <div class="timer-container__label">Seconds</div>
+      </div>
+
+      <div class="timer-container__input-container">
+        <input
+          type="number"
+          maxlength="2"
+          placeholder="00"
+          oninput="this.value = this.value.slice(0, this.maxLength)"
+          class="timer-container__input hours"
+        />
+        <p class="timer-container__colon">:</p>
+        <input
+          type="number"
+          maxlength="2"
+          oninput="this.value = this.value.slice(0, this.maxLength)"
+          placeholder="00"
+          class="timer-container__input minutes"
+        />
+        <p class="timer-container__colon">:</p>
+        <input
+          type="number"
+          maxlength="2"
+          placeholder="00"
+          oninput="this.value = this.value.slice(0, this.maxLength)"
+          class="timer-container__input seconds"
+        />
+      </div>
+
+      <div class="timer-container__btn-container">
+        <button class="timer-container__btn start">Start</button>
+        <button class="timer-container__btn stop">Stop</button>
+        <button class="timer-container__btn reset">Reset</button>
+      </div>
+    </div>
+  </body>
+</html>
